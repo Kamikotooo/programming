@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1.38. Даны основания и высота равнобедренной трапеции. Найти ее периметр.
+
+        // let h, a, b;
+        // let P;
+        // h = parseInt(prompt("Введите высоту: "));
+        // a = parseInt(prompt("Введите первое основание: "));
+        // b = parseInt(prompt("Введите второе основание: "));
+
+        // P = Math.round(h*(a+b)/2);
+
+        // alert("Периметр равен: " +P);
+
+        //2.2. Дана масса в килограммах. Найти число полных центнеров в ней.
+
+        // let mass, cent;
+
+        // mass = parseInt(prompt("Введите массу в килограммах: "))
+
+        // cent = Math.floor(mass / 100);
+        // alert("Масса в центнера равна: " + cent);
+
+        /*2.22. Дано натуральное число n (n > 99). Найти:
+        а) число десятков в нем;
+        б) число сотен в нем.*/
+
+        let n;
+        let a1, a2;
+
+        n = parseInt(prompt("Введите число n > 99: "));
+        a1 = n % 10; //единицы
+        a2 = Math.floor(n / 10 ) % 10; // десятки
+
+        alert("Число единиц равно: "+ a1);
+        alert("Число десятков равно: "+ a2);
+
+    </script>
+</body>
+</html>
