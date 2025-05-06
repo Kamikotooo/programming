@@ -12,53 +12,56 @@ p1.style.marginBottom = '20px';
 // === ЗАДАНИЕ 2 ===
 
 document.getElementById('email').value = 'mail@mail.ru';
-document.getElementById('email').disabled = true;
+document.getElementById('email').disabled = true;// Блокируем поле email
 
-document.getElementById('remember').checked = true;
+document.getElementById('remember').checked = true;// Ставим галочку
 
 document.getElementById('btn').textContent = 'Войти';
 
-// === ЗАДАНИЕ 3 ===
-const link = document.createElement('a');
+// === ЗАДАНИЕ 3: Ссылка с эффектами ===
+var link = document.createElement('a');
 link.href = 'https://portal.midis.info/stream/';
 link.textContent = 'ссылка на сайт';
-link.target = '_blank';
+link.target = '_blank';// Открываем ссылку в новом окне
 link.style.textDecoration = 'none';
 link.style.color = 'blue';
-link.style.transition = 'color 0.3s ease';
+link.style.transition = 'color 0.3s ease'; //плавный переход цвета при наведении
 link.style.display = 'inline-block';
 link.style.marginTop = '20px';
 
-link.addEventListener('mouseover', () => {
-  link.style.color = 'red';
+link.addEventListener('mouseover', function() {
+link.style.color = 'red';
 });
 
-link.addEventListener('mouseout', () => {
-  link.style.color = 'blue';
+link.addEventListener('mouseout', function() {
+link.style.color = 'blue';
 });
 
 document.getElementById('link-container').appendChild(link);
 
-// === ЗАДАНИЕ 4 ===
-const ball = document.getElementById('ball');
-const startBtn = document.getElementById('startBtn');
 
+// === ЗАДАНИЕ 4: Анимация мяча ===
+var ball = document.getElementById('ball');
+var startBtn = document.getElementById('startBtn');
 startBtn.style.marginBottom = '40px';
 
-let animationFrame;
-let currentY = 350;
+var animationFrame;
+var currentY = 350;
 
 function moveBallUp() {
-  if (currentY > 20) {
+if (currentY > 20) {
     currentY -= 5;
     ball.setAttribute('cy', currentY);
     animationFrame = requestAnimationFrame(moveBallUp);
-  } else {
+} else {
     cancelAnimationFrame(animationFrame);
-  }
+}
 }
 
-startBtn.addEventListener('click', () => {
-  currentY = 350; // сброс позиции
-  moveBallUp();
+startBtn.addEventListener('click', function() {
+if (animationFrame) {
+    cancelAnimationFrame(animationFrame);
+}
+currentY = 350;
+moveBallUp();
 });
