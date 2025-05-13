@@ -16,18 +16,30 @@
         </form>
         <div class="list-btns">
             <button id="btn">Кнопка</button>
+             
+            <button id="btn-sort-asc">Сортировать А → Я <i class="bi bi-sort-alpha-down"></i></button>
+            <button id="btn-sort-desc">Сортировать Я → А <i class="bi bi-sort-alpha-up"></i></button>
+            <button id="btn-filter-important">Показать важные</button>
+            <input id="search-task" type="text" placeholder="Введите текст задачи">
+            <button id="btn-clear-filters">Сбросить</button>
         </div>
         <div class="container">
             <div class="task">
                 <span>Выполнить инд задание html</span>
+                <i tabindex="0" class="bi bi-pencil-fill btn-edit"></i>
+                <i tabindex="0" class="bi bi-trash btn-remove"></i>
             </div>
             
             <div class="task importent">
                 <span>Купить продукты</span>
+                <i tabindex="0" class="bi bi-pencil-fill btn-edit"></i>
+                <i tabindex="0" class="bi bi-trash btn-remove"></i>
             </div>
 
             <div class="task importent">
                 <span>Заняться С#</span>
+                <i tabindex="0" class="bi bi-pencil-fill btn-edit"></i>
+                <i tabindex="0" class="bi bi-trash btn-remove"></i>
             </div>
 
         </div>
@@ -36,3 +48,54 @@
     
 </body>
 </html>
+
+<!-- 
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Менеджер задач</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons @1.12.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/tasker.css">
+</head>
+<body>
+    <div class="wrapper">
+        <form id="form-create-task" action="">
+            <input id="text-task" type="text" placeholder="Введите задачу"><br>
+            <input id="btn-create-task" type="submit" value="Создать задачу">
+        </form>
+
+        <div class="list-btns">
+            
+            <button id="btn-sort-asc">Сортировать А → Я <i class="bi bi-sort-alpha-down"></i></button>
+            <button id="btn-sort-desc">Сортировать Я → А</button>
+            <button id="btn-filter-important">Показать важные</button>
+            <input id="search-task" type="text" placeholder="Введите текст задачи">
+            <button id="btn-clear-filters">Сбросить</button>
+        </div>
+
+        <div class="container">
+            <div class="task important">
+                <span>Выполнить инд задание html</span>
+                <i tabindex="0" class="bi bi-pencil-fill btn-edit" aria-label="Редактировать"></i>
+                <i tabindex="0" class="bi bi-trash btn-remove" aria-label="Удалить"></i>
+            </div>
+
+            <div class="task important">
+                <span>Купить продукты</span>
+                <i tabindex="0" class="bi bi-pencil-fill btn-edit" aria-label="Редактировать"></i>
+                <i tabindex="0" class="bi bi-trash btn-remove" aria-label="Удалить"></i>
+            </div>
+
+            <div class="task">
+                <span>Заняться С#</span>
+                <i tabindex="0" class="bi bi-pencil-fill btn-edit" aria-label="Редактировать"></i>
+                <i tabindex="0" class="bi bi-trash btn-remove" aria-label="Удалить"></i>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/tasker.js"></script>
+</body>
+</html> -->
